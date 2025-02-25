@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Risotto</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #f8f8f8;
+            }
+
+            svg {
+                width: 800px;
+                height: 400px;
+            }
+
+            text {
+                font-family: Arial, sans-serif;
+                font-size: 100px;
+                font-weight: bold;
+                fill: black;
+            }
+        </style>
+    </head>
+    <body>
+
+        <svg viewBox="0 0 800 400">
+            <path id="curve" d="M100,300 Q400,50 700,300" fill="transparent"/>
+            <text>
+                <textPath href="#curve" startOffset="50%" text-anchor="middle">
+                    RISOTTO
+                </textPath>
+            </text>
+        </svg>
+
+    </body>
+</html>
