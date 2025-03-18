@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Another One Bites the Dust</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans flex items-center justify-center min-h-screen p-6">
+
+    <div class="container mx-auto p-8 max-w-2xl bg-gray-800 rounded-lg shadow-xl">
+        <h1 class="text-4xl font-extrabold text-center text-yellow-400 mb-6">
+            Another One Bites the Dust <br> <span class="text-indigo-400">Queen / Wyclef Jean</span>
+        </h1>
+
+      
+        <div class="flex justify-center mb-6">
+            <audio id="audio" controls class="w-full max-w-xl bg-gray-700 rounded-lg">
+                <source src="another-one-bites-the-dust.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+     
+        <div id="lyrics-container" class="space-y-6 text-center">
+            <p class="text-xl font-semibold text-blue-400">
+                Queen: <span id="lyric-freddie" class="block text-2xl text-white font-bold transition-all duration-300 ease-in-out">...</span>
+            </p>
+            <p class="text-xl font-semibold text-gray-400">
+                Wyclef: <span id="lyric-others" class="block text-2xl text-white font-bold transition-all duration-300 ease-in-out">...</span>
+            </p>
+        </div>
+    </div>
+
+    <script src="duetscript.js"></script>
+</body>
+</html>
