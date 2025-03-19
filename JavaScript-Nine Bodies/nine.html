@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nine Bodies in a Mexican Morgue</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gradient-to-b from-[#ffff7a] to-green-800 via-[#ee8544] m-5 p-5"></body>
+<header class="text-[72px] text-white mx-auto text-center">10 Passports but 9
+    Bodies</header>
+    <header class="text-[36px] text-white mx-auto text-center mb-5">The 10 People on
+        the Plane are:</header>
+        <div class="grid grid-cols-2 gap-4 p-10">
+            <div class="p-5 text-center mx-auto text-white relative">
+               <img src="1.png" alt="Flight Attendant" class="w-[300px] h-[300px]" />
+               <span class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden" onclick="removeX(this)">X</span>
+              <span>1- Flight Attendant</span>
+            </div>
+
+            <div class="p-5 text-center mx-auto text-white relative">
+                <img src="2.png" alt="pilote" class="w-[300px] h-[300px]" />
+                <span class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden" onclick="removeX(this)">X</span>
+               <span>2-Pilot</span>
+             </div>
+
+             <div class="p-5 text-center mx-auto text-white relative">
+                <img src="3.png" alt="doctore" class="w-[300px] h-[300px]" />
+                <span class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden" onclick="removeX(this)">X</span>
+               <span>3 - Doctore</span>
+             </div>
+
+             <div class="p-5 text-center mx-auto text-white relative">
+                <img src="4.png" alt="saleman" class="w-[300px] h-[300px]" />
+               <span>4 - Insurance saleman</span>
+             </div>
+
+             <div class="p-5 text-center mx-auto text-white relative">
+                <img src="5.png" alt="lisa" class="w-[300px] h-[300px]" />
+                <span class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden" onclick="removeX(this)">X</span>
+               <span>5 - MAGA wife</span>
+             </div>
+
+             <div class="p-5 text-center mx-auto text-white relative">
+                <img src="6.png" alt="maga" class="w-[300px] h-[300px]" />
+                <span class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden" onclick="removeX(this)">X</span>
+               <span>6 - MAGA Husband</span>
+             </div>
+
+             <div class="p-5 text-center mx-auto text-white relative">
+                <img src="7.png" alt="photo grapher" class="w-[300px] h-[300px]" />
+                <span class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden" onclick="removeX(this)">X</span>
+               <span>7 - Photographer</span>
+             </div>
+
+             <div class="p-5 text-center mx-auto text-white relative">
+                <img src="8.png" alt="lisa" class="w-[300px] h-[300px]" />
+                <span class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden" onclick="removeX(this)">X</span>
+               <span>8 - Tech Kid Wife</span>
+             </div>
+ 
+             <div class="p-5 text-center mx-auto text-white relative">
+                <img src="9.png" alt="driver" class="w-[300px] h-[300px]" />
+                <span class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden" onclick="removeX(this)">X</span>
+               <span>9 - Tech Kid Husband</span>
+             </div>
+
+             <div class="p-5 text-center mx-auto text-white relative">
+                <img src="10.png" alt="wristel" class="w-[300px] h-[300px]" />
+                <span class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden" onclick="removeX(this)">X</span>
+               <span>10 - Mexican wristler</span>
+             </div>
+        </div>
+        <span class="absolute top-0 left-0 w-full h-full text-center text-red-500 text-[200px] font-bold hidden" onclick="removeX(this)">X</span>
+        <button class="mt-5 px-6 py-2 bg-red-500 text-white text-xl font-semibold
+        hover:bg-red-700 transition-all mx-auto block"
+        onclick="resetAllX()">
+        Reset
+        </button>
+
+
+
+
+
+
+        <script>
+            // Function to show the X on the image when clicked
+            document.querySelectorAll("img").forEach((img) => {
+            img.addEventListener("click", function () {
+            const closeX = this.nextElementSibling; // The <span> with the "X"
+            closeX.classList.remove("hidden"); // Show the X by removing 'hidden' class
+            });
+            });
+            // Function to remove a specific X when clicked
+            function removeX(span) {
+            span.classList.add("hidden"); // Hide the X by adding 'hidden' class
+            }
+            // Function to reset (remove) all X's
+            function resetAllX() {
+            document.querySelectorAll("span").forEach((span) => {
+            if (span.classList.contains("text-red-500")) {
+            // Ensure we're only resetting X spans
+            span.classList.add("hidden"); // Hide all the X's by adding 'hidden' class
+            }
+            });
+            }
+            </script>
+</body>
+</html>
